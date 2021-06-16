@@ -1,0 +1,34 @@
+.address {
+  background-color: $pink;
+  padding: 35px 0;
+  z-index: 10;
+}
+.container {
+}
+h4.address__title {
+  color: rgba($accent, 0.1);
+}
+.address__place,
+.address__time {
+  padding: 0 50px;
+  @include RL14;
+  text-align: center;
+}
+.address__place {
+  margin: 20px 0 15px 0;
+  font-style: normal;
+}
+
+.address__map {
+  position: relative;
+  margin: 18px 0;
+  iframe {
+    top: 0;
+    left: 0;
+  }
+}
+.address__image {
+  margin: 0 auto;
+  border-radius: 6px;
+  display: block;
+}

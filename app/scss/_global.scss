@@ -6,15 +6,98 @@ html {
 *::after {
   box-sizing: inherit;
 }
-a {
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
- }
+// font-family: 'Merriweather', serif;
+// font-family: 'Pacifico', cursive;
+// font-family: 'Roboto', sans-serif;
 html,
 body {
   position: relative;
   overflow-x: hidden;
   min-width: 320px;
+  color: $text;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+button,
+input {
+  border: none;
+  &:focus-visible,
+  &:active,
+  &:visited,
+// отрабатывает на мобильном
+  &:focus-within {
+    outline: none;
+  }
+}
+button {
+  background-color: $accent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 220px;
+  height: 48px;
+  border-radius: 9px;
+  @include RR17;
+  margin: 0 auto;
+}
+li {
+  list-style: none;
+  box-sizing:border-box;
+}
+section{
+position: relative;
+}
+// прижимаем footer к дну страницы
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+//
+.container {
+  max-width: 1920px;
+  padding: 0 20px;
+  margin: 0 auto;
+  z-index:10;
+  position: relative;
+}
+h4[class$="__title"] {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 53px;
+  color: rgba($pink, 0.5);
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  span{
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:5px;
+     font-size: 30px;
+    line-height: 40px;
+    color: $title;
+  }
 }

@@ -1,0 +1,51 @@
+.header {
+}
+.container {
+}
+.header__inner {
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+}
+.header__logo-img {
+}
+.header__tel {
+  @include RR11;
+}
+.header__cart {
+  position: relative;
+}
+.header__cart-counter {
+  position: absolute;
+  border-radius: 50%;
+  @include RR9;
+  background-color: #e9e9e9;
+  padding: 3px 5px;
+  text-align: center;
+  top: 65%;
+  right: -5px;
+}
+.header__nav {
+}
+.header__nav-burger {
+  margin-top: -5px;
+  border-top: 2px solid $pink;
+  width: 28px;
+  box-shadow: (0 6px 0 0 $pink), (0 12px 0 0 $pink);
+}
+.header__nav-inner {
+  display: none;
+}
+.header__nav-list {
+}
+.header__nav-item {
+}
+.header__nav-link {
+}
+.header__nav-social {
+}
+.header__nav-social-link {
+}

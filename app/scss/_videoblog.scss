@@ -1,0 +1,29 @@
+.videoblog {
+  padding-top:25px;
+  &::before{
+   content:url('../images/videoblog/videoblog-bgr.jpg');
+    top:65%; 
+     @include flr-l;
+  }
+}
+.container {
+}
+.videoblog__title {
+
+}
+.videoblog__content {
+  padding: 20px 27px;
+}
+.videoblog__video {
+  min-height: 178px;
+  border-radius: 9px;
+  filter: drop-shadow(5px 4px 36px rgba(184, 154, 154, 0.27));
+  & + & {
+    margin-top: 20px;
+  }
+}
+
+.videoblog__btn {
+  @extend button;
+  max-width: 290px;
+}

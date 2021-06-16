@@ -1,14 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather&family=Pacifico&family=Roboto:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
 
-  
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <a href="#" class="header__logo">
+              <img src="images/header/logo.png" alt="Шторбери-логотип" class="header__logo-img"></a>
+            <a href="tel:+79048268514" class="header__tel">+7 (904) 826-85-14</a>
+            <a href="#" class="header__cart">
+              <svg class="header__cart-icon"width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.8948 9.48606C24.3345 9.48606 24.71 9.64046 25.0211 9.94925C25.3322 10.258 25.4878 10.6306 25.4878 11.0671C25.4878 11.5035 25.3322 11.8761 25.0211 12.1849C24.71 12.4937 24.3345 12.6481 23.8948 12.6481H23.7081L22.2769 20.8249C22.2106 21.2037 22.028 21.5166 21.7294 21.7636C21.4307 22.0106 21.0905 22.1341 20.7088 22.1341H4.77896C4.39731 22.1341 4.05714 22.0106 3.75846 21.7636C3.45977 21.5166 3.27724 21.2037 3.21087 20.8249L1.77967 12.6481H1.59299C1.15326 12.6481 0.777826 12.4937 0.466696 12.1849C0.155565 11.8761 0 11.5035 0 11.0671C0 10.6306 0.155565 10.258 0.466696 9.94925C0.777826 9.64046 1.15326 9.48606 1.59299 9.48606H23.8948ZM6.03593 19.3674C6.25165 19.3509 6.4321 19.2583 6.5773 19.0895C6.72249 18.9207 6.78679 18.7292 6.7702 18.5151L6.37195 13.3768C6.35536 13.1627 6.26202 12.9836 6.09193 12.8395C5.92185 12.6954 5.72895 12.6316 5.51323 12.6481C5.29751 12.6646 5.11706 12.7572 4.97186 12.926C4.82667 13.0948 4.76237 13.2863 4.77896 13.5003L5.17721 18.6386C5.1938 18.8445 5.27885 19.0174 5.43234 19.1574C5.58583 19.2974 5.76628 19.3674 5.9737 19.3674H6.03593ZM11.1509 18.5769V13.4386C11.1509 13.2245 11.0721 13.0392 10.9145 12.8828C10.7568 12.7263 10.5701 12.6481 10.3544 12.6481C10.1387 12.6481 9.95203 12.7263 9.79439 12.8828C9.63675 13.0392 9.55793 13.2245 9.55793 13.4386V18.5769C9.55793 18.791 9.63675 18.9762 9.79439 19.1327C9.95203 19.2892 10.1387 19.3674 10.3544 19.3674C10.5701 19.3674 10.7568 19.2892 10.9145 19.1327C11.0721 18.9762 11.1509 18.791 11.1509 18.5769ZM15.9299 18.5769V13.4386C15.9299 13.2245 15.8511 13.0392 15.6934 12.8828C15.5358 12.7263 15.3491 12.6481 15.1334 12.6481C14.9177 12.6481 14.731 12.7263 14.5733 12.8828C14.4157 13.0392 14.3369 13.2245 14.3369 13.4386V18.5769C14.3369 18.791 14.4157 18.9762 14.5733 19.1327C14.731 19.2892 14.9177 19.3674 15.1334 19.3674C15.3491 19.3674 15.5358 19.2892 15.6934 19.1327C15.8511 18.9762 15.9299 18.791 15.9299 18.5769ZM20.3106 18.6386L20.7088 13.5003C20.7254 13.2863 20.6611 13.0948 20.5159 12.926C20.3707 12.7572 20.1903 12.6646 19.9746 12.6481C19.7589 12.6316 19.566 12.6954 19.3959 12.8395C19.2258 12.9836 19.1324 13.1627 19.1159 13.3768L18.7176 18.5151C18.701 18.7292 18.7653 18.9207 18.9105 19.0895C19.0557 19.2583 19.2362 19.3509 19.4519 19.3674H19.5141C19.7215 19.3674 19.902 19.2974 20.0555 19.1574C20.209 19.0174 20.294 18.8445 20.3106 18.6386ZM5.92392 3.60668L4.76652 8.69556H3.12375L4.38072 3.24848C4.53836 2.52385 4.90756 1.93303 5.48834 1.47602C6.06912 1.01901 6.73286 0.790505 7.47958 0.790505H9.55793C9.55793 0.57641 9.63675 0.391135 9.79439 0.234681C9.95203 0.0782271 10.1387 0 10.3544 0H15.1334C15.3491 0 15.5358 0.0782271 15.6934 0.234681C15.8511 0.391135 15.9299 0.57641 15.9299 0.790505H18.0082C18.7549 0.790505 19.4187 1.01901 19.9995 1.47602C20.5802 1.93303 20.9494 2.52385 21.1071 3.24848L22.3641 8.69556H20.7213L19.5639 3.60668C19.4726 3.24437 19.2839 2.94793 18.9976 2.71736C18.7114 2.4868 18.3816 2.37152 18.0082 2.37152H15.9299C15.9299 2.58561 15.8511 2.77089 15.6934 2.92734C15.5358 3.08379 15.3491 3.16202 15.1334 3.16202H10.3544C10.1387 3.16202 9.95203 3.08379 9.79439 2.92734C9.63675 2.77089 9.55793 2.58561 9.55793 2.37152H7.47958C7.10622 2.37152 6.77642 2.4868 6.49018 2.71736C6.20394 2.94793 6.01519 3.24437 5.92392 3.60668Z"
+                  fill="#AA1565" />
+                <path
+                  d="M23.8948 9.48606C24.3345 9.48606 24.71 9.64046 25.0211 9.94925C25.3322 10.258 25.4878 10.6306 25.4878 11.0671C25.4878 11.5035 25.3322 11.8761 25.0211 12.1849C24.71 12.4937 24.3345 12.6481 23.8948 12.6481H23.7081L22.2769 20.8249C22.2106 21.2037 22.028 21.5166 21.7294 21.7636C21.4307 22.0106 21.0905 22.1341 20.7088 22.1341H4.77896C4.39731 22.1341 4.05714 22.0106 3.75846 21.7636C3.45977 21.5166 3.27724 21.2037 3.21087 20.8249L1.77967 12.6481H1.59299C1.15326 12.6481 0.777826 12.4937 0.466696 12.1849C0.155565 11.8761 0 11.5035 0 11.0671C0 10.6306 0.155565 10.258 0.466696 9.94925C0.777826 9.64046 1.15326 9.48606 1.59299 9.48606H23.8948ZM6.03593 19.3674C6.25165 19.3509 6.4321 19.2583 6.5773 19.0895C6.72249 18.9207 6.78679 18.7292 6.7702 18.5151L6.37195 13.3768C6.35536 13.1627 6.26202 12.9836 6.09193 12.8395C5.92185 12.6954 5.72895 12.6316 5.51323 12.6481C5.29751 12.6646 5.11706 12.7572 4.97186 12.926C4.82667 13.0948 4.76237 13.2863 4.77896 13.5003L5.17721 18.6386C5.1938 18.8445 5.27885 19.0174 5.43234 19.1574C5.58583 19.2974 5.76628 19.3674 5.9737 19.3674H6.03593ZM11.1509 18.5769V13.4386C11.1509 13.2245 11.0721 13.0392 10.9145 12.8828C10.7568 12.7263 10.5701 12.6481 10.3544 12.6481C10.1387 12.6481 9.95203 12.7263 9.79439 12.8828C9.63675 13.0392 9.55793 13.2245 9.55793 13.4386V18.5769C9.55793 18.791 9.63675 18.9762 9.79439 19.1327C9.95203 19.2892 10.1387 19.3674 10.3544 19.3674C10.5701 19.3674 10.7568 19.2892 10.9145 19.1327C11.0721 18.9762 11.1509 18.791 11.1509 18.5769ZM15.9299 18.5769V13.4386C15.9299 13.2245 15.8511 13.0392 15.6934 12.8828C15.5358 12.7263 15.3491 12.6481 15.1334 12.6481C14.9177 12.6481 14.731 12.7263 14.5733 12.8828C14.4157 13.0392 14.3369 13.2245 14.3369 13.4386V18.5769C14.3369 18.791 14.4157 18.9762 14.5733 19.1327C14.731 19.2892 14.9177 19.3674 15.1334 19.3674C15.3491 19.3674 15.5358 19.2892 15.6934 19.1327C15.8511 18.9762 15.9299 18.791 15.9299 18.5769ZM20.3106 18.6386L20.7088 13.5003C20.7254 13.2863 20.6611 13.0948 20.5159 12.926C20.3707 12.7572 20.1903 12.6646 19.9746 12.6481C19.7589 12.6316 19.566 12.6954 19.3959 12.8395C19.2258 12.9836 19.1324 13.1627 19.1159 13.3768L18.7176 18.5151C18.701 18.7292 18.7653 18.9207 18.9105 19.0895C19.0557 19.2583 19.2362 19.3509 19.4519 19.3674H19.5141C19.7215 19.3674 19.902 19.2974 20.0555 19.1574C20.209 19.0174 20.294 18.8445 20.3106 18.6386ZM5.92392 3.60668L4.76652 8.69556H3.12375L4.38072 3.24848C4.53836 2.52385 4.90756 1.93303 5.48834 1.47602C6.06912 1.01901 6.73286 0.790505 7.47958 0.790505H9.55793C9.55793 0.57641 9.63675 0.391135 9.79439 0.234681C9.95203 0.0782271 10.1387 0 10.3544 0H15.1334C15.3491 0 15.5358 0.0782271 15.6934 0.234681C15.8511 0.391135 15.9299 0.57641 15.9299 0.790505H18.0082C18.7549 0.790505 19.4187 1.01901 19.9995 1.47602C20.5802 1.93303 20.9494 2.52385 21.1071 3.24848L22.3641 8.69556H20.7213L19.5639 3.60668C19.4726 3.24437 19.2839 2.94793 18.9976 2.71736C18.7114 2.4868 18.3816 2.37152 18.0082 2.37152H15.9299C15.9299 2.58561 15.8511 2.77089 15.6934 2.92734C15.5358 3.08379 15.3491 3.16202 15.1334 3.16202H10.3544C10.1387 3.16202 9.95203 3.08379 9.79439 2.92734C9.63675 2.77089 9.55793 2.58561 9.55793 2.37152H7.47958C7.10622 2.37152 6.77642 2.4868 6.49018 2.71736C6.20394 2.94793 6.01519 3.24437 5.92392 3.60668Z"
+                  fill="#B89A9A" />
+              </svg>
+              <div class="header__cart-counter">0</div>
+            </a>
+            <nav class="header__nav">
+              <div class="header__nav-burger"></div>
+              <div class="header__nav-inner">
+                <ul class="header__nav-list">
+                  <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Каталог товаров</a></li>
+                  <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Как мы работаем</a></li>
+                  <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Наша команда</a></li>
+                  <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Примеры наших работ</a></li>
+                  <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Портфолио</a></li>
+                  <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Отзывы</a></li>
+                  <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Контакты</a></li>
+                  <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Статьи</a></li>
+                </ul>
+                <li class="header__nav-social">
+                  <a href="#" class="header__nav-social-link"></a>
+                  <a href="#" class="header__nav-social-link"></a>
+                </li>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <section class="top__banner">
+        <div class="container">
+          <h1 class="top__banner-title">Шторы под ваш интерьер от 3 дней под ключ в Омске</h1>
+        </div>
+        <div class="top__banner-box">
+          <div class="container">
+            <div class="top__banner-item">
+              <img src="images/top-banner/top-banner-icon-1.png" alt="Выезд дизайнера" class="top__banner-item-icon">
+              <div class="top__banner-item-text"> Выезд дизайнера
+                с образцами тканей</div>
+            </div>
+            <div class="top__banner-item">
+              <img src="images/top-banner/top-banner-icon-2.png" alt="Акция" class="top__banner-item-icon">
+              <div class="top__banner-item-text">До конца месяца акция!
+                Бесплатная развеска штор</div>
+            </div>
+            <div class="top__banner-item">
+              <img src="images/top-banner/top-banner-icon-3.png" alt="Опытные швеи" class="top__banner-item-icon">
+              <div class="top__banner-item-text">Швеи со стажем<br>более 15 лет</div>
+            </div>
+            <div class="top__banner-item">
+              <img src="images/top-banner/top-banner-icon-4.png" alt="Ткани в наличии" class="top__banner-item-icon">
+              <div class="top__banner-item-text">Турецкие ткани<br>90% тканей в наличии
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="top__banner-btn">Пригласить дизайнера</button>
+      </section>
+      <section class="catalog" id="catalog">
+        <div class="container">
+          <h4 class="catalog__title">Каталог товаров
+            <span>Каталог товаров</span> </h4>
+          <ul class="catalog__items">
+            <li class="catalog__item">
+              <img src="images/catalog/catalog-img-1.jpg" alt="Комплекты штор" class="catalog__item-img"><a href="#"
+                class="catalog-item-link">Комплекты штор
+              </a></li>
+            <li class="catalog__item">
+              <img src="images/catalog/catalog-img-2.jpg" alt="Тюль" class="catalog__item-img">
+              <a href="#" class="catalog-item-link"><span>Тюль</span>
+              </a></li>
+            <li class="catalog__item">
+              <img src="images/catalog/catalog-img-3.jpg" alt="Кухонные шторы" class="catalog__item-img">
+              <a href="#" class="catalog-item-link">Кухонные шторы
+              </a></li>
+            <li class="catalog__item">
+              <img src="images/catalog/catalog-img-4.jpg" alt="Покрывала" class="catalog__item-img">
+              <a href="#" class="catalog-item-link">Покрывала
+              </a></li>
+            <li class="catalog__item">
+              <img src="images/catalog/catalog-img-5.jpg" alt="Аксессуары" class="catalog__item-img">
+              <a href="#" class="catalog-item-link">Аксессуары
+              </a></li>
+            <li class="catalog__item">
+              <img src="images/catalog/catalog-img-6.jpg" alt="Шторы со скидкой" class="catalog__item-img">
+              <a href="#" class="catalog-item-link">Шторы со скидкой
+              </a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="cycle" id="cycle">
+        <div class="container">
+          <h4 class="cycle__title">Как мы работаем
+            <span>Как мы работаем</span>
+          </h4>
+          <ul class="cycle__items">
+            <li class="cycle__item">
+              <div class="cycle__item-title">Звонок или заявка на сайте</div>
+              <div class="cycle__item-text">Вы оставляете заявку на сайте или звоните по телефону 8(904) 826-85-14, мы
+                отвечаем на вопросы и договариемся
+                о встрече </div>
+            </li>
+            <li class="cycle__item">
+              <div class="cycle__item-title">Встреча, замер и выбор ткани</div>
+              <div class="cycle__item-text">Мы приезжаем в назначенное время, замеряем оконный блок, выбираем ткань и
+                обсуждаем детали проекта</div>
+            </li>
+            <li class="cycle__item">
+              <div class="cycle__item-title">Заключение договора и оплата</div>
+              <div class="cycle__item-text">Заключаем договор, вы оплачиваете 50% стоимости заказа</div>
+            </li>
+            <li class="cycle__item">
+              <div class="cycle__item-title">Пошив штор и доставка</div>
+              <div class="cycle__item-text">Мы приступаем к пошиву штор. Средний срок изготовления 5 дней</div>
+            </li>
+            <li class="cycle__item">
+              <div class="cycle__item-title">Хорошее настроение
+                и уют в доме</div>
+              <div class="cycle__item-text">Мы доставляем шторы, помогаем развешать и правильно оформить. Вы
+                наслождаетесь результатом</div>
+            </li>
+            <li class="cycle__item">
+              <div class="cycle__item-title">К чему долго ждать?</div>
+              <div class="cycle__item-text">Жмите на кнопку и заказывайте бесплатный выезд дизайнера прямо сейчас!</div>
+              <button class="cycle__item-btn">Пригласить дизайнера</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="examples" id="examples">
+        <div class="container">
+          <h4 class="examples__title">Примеры наших работ
+            <span>Примеры наших работ</span>
+          </h4>
+          <div class="examples__part ">
+            <div class="examples__part-media">
+              <img class="examples__media-img" src="images/examples/examples-p1-img-1.jpg">
+              <img class="examples__media-img" src="images/examples/examples-p1-img-2.jpg">
+              <img class="examples__media-img" src="images/examples/examples-p1-img-3.jpg">
+              <img class="examples__media-img" src="images/examples/examples-p1-img-4.jpg">
+              <video class="examples__media-insta-link-video" width="100%" controls
+                poster="images/examples/examples-p1-img-video.jpg">
+                <source type="video/youtube" src="https://www.youtube.com/watch?v=apgClat2bMg">
+              </video>
+            </div>
+            <div class="examples__part-text">
+              <h6 class="examples__title-problem">Проблема</h6>
+              <div class="examples__text-problem">Во время ремонта убрали стену, чтобы кухню и зал сделать единым
+                пространством. На кухне свой стиль – бирюзовый кухонный гарнитур, а гостиная в классическом стиле с
+                обоями под штукатурку. Вид окон на набережную и в обед мешает солнце, так же сложность в том, что
+                потолки высокие около 3 метров + неровность пола. Нужны шторы, которые не будут касаться пола, а это
+                значит, что каждую штору надо делать под определенную высоту.</div>
+              <h6 class="examples__title-solution">Решение</h6>
+              <div class="examples__text-solution">Мы подобрали бархат - он проходит по высоте, отлично затеняет от
+                солнца. Цвет подобрали универсальный, чтобы и к кухонному гарнитуру подходил и к обоям это серо-бежевый
+                цвет. Тюль подобрали однотонный, так как он тоже проходит по высоте, тюль будет с невидимыми разрезами у
+                выхода на балкон и у окна, чтобы удобно открывать на проветривание. Мы замерили окно по высоте в разных
+                местах, чтобы учесть перепад и каждую штору вешать на определенное место. </div>
+              <h6 class="examples__title-result">Результат</h6>
+              <div class="examples__text-result">Комната выглядит уютно и нарядно. Скрыли трубы, которые шли по
+                стене, невидимые разрезы на тюле сделали использование балкона и окна удобным. При закрытие окна
+                портьерами в комнате становится достаточно темно, чтобы солнце не мешало.</div>
+              <div class="examples__request-box">
+                <div class="examples__request-days">От замера до навески<span class="examples__request-line"></span>5
+                  дней</div>
+                <div class="examples__request-price">Цена <span class="examples__request-line"></span>34 900
+                  руб</div>
+                <button class="examples__request-btn" type="button">Оставить заявку</button>
+              </div>
+              <div class="examples__request-btn-subscribe">На выезд дизайнера*</div>
+            </div>
+          </div>
+          <div class="examples__part">
+            <div class="examples__part-media">
+              <img class="examples__media-img" src="images/examples/examples-p2-img-1.jpg">
+              <img class="examples__media-img" src="images/examples/examples-p2-img-2.jpg">
+              <img class="examples__media-img" src="images/examples/examples-p2-img-3.jpg">
+              <img class="examples__media-img" src="images/examples/examples-p2-img-4.jpg">
+              <!-- <a href="#" class="examples__media-insta-link-video"></a> -->
+              <video class="examples__media-video" width="100%" controls
+                poster="images/examples/examples-p2-img-video.jpg">
+                <source type="video/youtube" src="https://www.youtube.com/watch?v=apgClat2bMg">
+              </video>
+            </div>
+            <div class="examples__part-text">
+              <h6 class="examples__title-problem">Проблема</h6>
+              <div class="examples__text-problem">У Елены ремонт подошел к концу и сил на погружение в мир штор не
+                осталось. Интерьер квартиры разрабатывали дизайнеры в скандинавском стиле. Комната выполнена в светлых
+                серо-бежевых цветах, одна стена расписана элементами растений, мебель деревянная, комната выглядит
+                натурально и минималистично. Комната на солнечной стороне, окна соседей расположены напротив окон
+                спальни.
+              </div>
+              <h6 class="examples__title-solution">Решение</h6>
+              <div class="examples__text-solution"> Мы сделали замеры, просчитали коэффициент сборки штор.
+                Подобрали шторы из линейки канваса, фактура ткани прекрасно подходит к скандинавскому интерьеру, цвет
+                благородный темный имбирь и хоть портьера не является блэкаутом она хорошо затеняет окно от солнца и
+                любителям поспать подольше этого будет достаточно.
+                Тюль однотонный в молочном цвете с эффектом дождя придал комнате стиля. Тюль заложили фалдами, чтобы
+                складки были всегда идеально ровными, а невидимый разрез по центру тюля сделал использование окна и
+                подоконника удобным.
+                Покрывало и декоративные подушки полностью завершают образ комнаты шторы и покрывало смотрятся, как
+                комплект. Покрывало и наволочки сделаны из того же материала, что и шторы. Материал мягкий и приятен к
+                телу не образует катышек, прекрасно защитит постель от домашних животных и пыли.
+              </div>
+              <h6 class="examples__title-result">Результат</h6>
+              <div class="examples__text-result">Дорогие друзья, рамки и место обучения кадров способствует
+                повышению актуальности позиций, занимаемых участниками в отношении поставленных задач! </div>
+              <div class="examples__request-box">
+                <div class="examples__request-days">От замера до навески<span class="examples__request-line"></span>6
+                  дней</div>
+                <div class="examples__request-price">Цена <span class="examples__request-line"></span>27 500
+                  руб</div>
+                <button class="examples__request-btn" type="button">Оставить заявку</button>
+                <div class="examples__request-btn-subscribe">На выезд дизайнера*</div>
+              </div>
+            </div>
+          </div>
+          <div class="examples__part">
+            <div class="examples__part-media">
+              <img class="examples__media-img" src="images/examples/examples-p3-img-1.jpg">
+              <img class="examples__media-img" src="images/examples/examples-p3-img-2.jpg">
+              <img class="examples__media-img" src="images/examples/examples-p3-img-3.jpg">
+              <img class="examples__media-img" src="images/examples/examples-p3-img-4.jpg">
+              <video class="examples__media-video" width="100%" controls
+                poster="images/examples/examples-p3-img-video.jpg">
+                <source type="video/youtube" src="https://www.youtube.com/watch?v=apgClat2bMg">
+              </video>
+            </div>
+            <div class="examples__part-text">
+              <h6 class="examples__title-problem">Проблема</h6>
+              <div class="examples__text-problem">У коттеджа большие панорамные окна, а на против находятся окна
+                соседей. Дом сделан и бревна, интерьер скандинавский, современный и натуральный и шторы нужны
+                соответствующие, которые дополнят стиль дома. Так же из оконного проема снизу сильно выступает бревно и
+                его нужно скрыть.
+              </div>
+              <h6 class="examples__title-solution">Решение</h6>
+              <div class="examples__text-solution">Подобрали портьеры лен в серо - голубом цвете и заложили их
+                декоративной фалдой, а сверху сделали гребень, чтобы скрыть карниз. Для того, чтобы сгладить массивность
+                бревен, тюль подобрали воздушный в молочном цвете, тюль так же заложили декоративной фалдой, чтобы
+                «волны» всегда были идеально ровными.
+              </div>
+              <h6 class="examples__title-result">Результат</h6>
+              <div class="examples__text-result">Шторы дополнили интерьер дома, сделали его уютным и завершенным.
+                Фактура и рисунок портьеры лен идеально подошли, а бревно, которое сильно выступало удачно скрылось за
+                шторой. Тюль сеточка маркиза, добавила воздушность и тем самым сгладила массивность бревен.
+              </div>
+              <div class="examples__request-box">
+                <div class="examples__request-days">От замера до навески<span class="examples__request-line"></span>6
+                  дней</div>
+                <div class="examples__request-price">Цена <span class="examples__request-line"></span>25 250
+                  руб</div>
+                <button class="examples__request-btn" type="button">Оставить заявку</button>
+                <div class="examples__request-btn-subscribe">На выезд дизайнера*</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="videoblog" id="videoblog">
+        <div class="container">
+          <h4 class="videoblog__title">Видеоблог
+            <span>Видеоблог</span>
+          </h4>
+          <div class="videoblog__content">
+            <video class="videoblog__video" width="100%" controls poster="images/videoblog/videoblog-img-1.jpg">
+              <source type="video/youtube" src="https://www.youtube.com/watch?v=apgClat2bMg">
+            </video>
+
+            <video class="videoblog__video" width="100%" controls poster="images/videoblog/videoblog-img-2.jpg">
+              <source type="video/youtube" src="https://www.youtube.com/watch?v=apgClat2bMg">
+            </video>
+          </div>
+          <a class="videoblog__btn" href="#">
+            Смотреть все видео на YouTube
+          </a>
+        </div>
+      </section>
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <h4 class="portfolio__title">Наше портфолио
+            <span>Наше портфолио</span>
+          </h4>
+          <p class="portfolio__text">Предлагаем ознакомиться с работами наших дизайнеров и посмотреть фото штор в
+            интерьере квартир и загородных домов</p>
+          <div class="portfolio__slider">
+            <div class="portfolio__slider-wrap swiper-wrapper">
+              <div class="portfolio__slide-wrap swiper-slide">
+                <div class="portfolio__slider-slide">
+                  <img src="images/porfolio/portfolio-slider-img-1.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-2.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-3.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-4.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-5.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-6.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                </div>
+              </div>
+              <div class="portfolio__slide-wrap swiper-slide">
+                <div class="portfolio__slider-slide">
+                  <img src="images/porfolio/portfolio-slider-img-2.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-1.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-6.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-4.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-5.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-3.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                </div>
+              </div>
+              <div class="portfolio__slide-wrap swiper-slide">
+                <div class="portfolio__slider-slide">
+                  <img src="images/porfolio/portfolio-slider-img-5.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-3.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-6.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-1.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-4.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                  <img src="images/porfolio/portfolio-slider-img-2.jpg" alt="Шторы" class="portfolio__slider-slide-img">
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__slider-prev"><svg width="9" height="16" viewBox="0 0 9 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.292893 7.29289C-0.097631 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM2 7L1 7L1 9L2 9L2 7Z"
+                  fill="#AA1565" />
+                <path
+                  d="M0.292893 7.29289C-0.097631 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM2 7L1 7L1 9L2 9L2 7Z"
+                  fill="#B89A9A" />
+              </svg>
+            </div>
+            <div class="portfolio__slider-next"><svg width="9" height="16" viewBox="0 0 9 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z"
+                  fill="#B89A9A" />
+              </svg>
+            </div>
+            <div class="portfolio__slider-pagination">
+              <!-- <span class="swiper-pagination-bullet"></span>
+              <span class="swiper-pagination-bullet"></span>
+              <span class="swiper-pagination-bullet"></span> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="request" id="request">
+        <div class="container">
+          <h4 class="request__title">Заявка на выезд дизайнера
+            <span>Заявка на выезд </span>
+          </h4>
+          <div class="request__subtitle">Стоимость услуги 500 рублей, но при заказе штор бесплатный
+          </div>
+          <form class="request__form">
+            <input type="text" class="request__form-name" name="name" placeholder="Введите имя" required="required">
+            <input type="tel" class="request__form-tel" name="tel" placeholder="Ваш номер телефона" required="required" pattern="^\d{11}$">
+            <input class="request__check" id="request__check" type="checkbox" name="check" value="check2">
+            <label for="request__check" class="request__check-label">Нажамая на кнопку, вы соглашаетесь с условиями
+              обработки персональных
+              данных</label>
+            <button class="request__form-btn" type="submit">Пригласить дизайнера</button>
+            <div class="request-btn-subscribe">
+              Перезвоним в течение 5 минут
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="workers" id="workers">
+        <div class="container">
+          <h4 class="workers__title">Наш коллектив
+            <span>Наш коллектив</span>
+          </h4>
+          <div class="workers__galery">
+            <div class="workers__galery-item">
+              <img src="images/workers/workers-img-1.jpg" alt="Директор" class="workers__galery-item-img">
+              <div class="workers__galery-item-text">
+                <div class="workers__galery-item-name">Марина</div>
+                <div class="workers__galery-item-prof">Директор, дизайнер, швея</div>
+              </div>
+            </div>
+            <div class="workers__galery-item">
+              <img src="images/workers/workers-img-2.jpg" alt="Продавец-консультант" class="workers__galery-item-img">
+              <div class="workers__galery-item-text">
+                <div class="workers__galery-item-name">Виктория</div>
+                <div class="workers__galery-item-prof">Продавец-консультант, дизайнер</div>
+              </div>
+            </div>
+            <div class="workers__galery-item">
+              <img src="images/workers/workers-img-3.jpg" alt="Инженер технолог" class="workers__galery-item-img">
+              <div class="workers__galery-item-text">
+                <div class="workers__galery-item-name">Ольга</div>
+                <div class="workers__galery-item-prof">Инженер технолог, швея</div>
+              </div>
+            </div>
+            <div class="workers__galery-item">
+              <img src="images/workers/workers-img-4.jpg" alt="Замерщик" class="workers__galery-item-img">
+              <div class="workers__galery-item-text">
+                <div class="workers__galery-item-name">Алексей</div>
+                <div class="workers__galery-item-prof">Замерщик, монтаж карнизов</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback" id="feedback">
+        <div class="container">
+          <h4 class="feedback__title">Отзывы
+            <span>Отзывы</span>
+          </h4>
+          <div class="feedback__slider-container">
+            <div class="feedback__slider">
+              <div class="feedback__slider-wrap swiper-wrapper">
+                <div class="feedback__slider-slide swiper-slide">
+                  <img src="images/feedback/feedback__slide-img-1.jpg" alt="" class="feedback__slider-slide-img">
+                </div>
+                <div class="feedback__slider-slide swiper-slide">
+                  <img src="images/feedback/feedback__slide-img-1.jpg" alt="" class="feedback__slider-slide-img">
+                </div>
+                <div class="feedback__slider-slide swiper-slide">
+                  <img src="images/feedback/feedback__slide-img-1.jpg" alt="" class="feedback__slider-slide-img"></div>
+                <div class="feedback__slider-slide swiper-slide">
+                  <img src="images/feedback/feedback__slide-img-1.jpg" alt="" class="feedback__slider-slide-img"></div>
+                <div class="feedback__slider-slide swiper-slide">
+                  <img src="images/feedback/feedback__slide-img-1.jpg" alt="" class="feedback__slider-slide-img"></div>
+                <div class="feedback__slider-slide swiper-slide">
+                  <img src="images/feedback/feedback__slide-img-1.jpg" alt="" class="feedback__slider-slide-img"></div>
+                <div class="feedback__slider-slide swiper-slide">
+                  <img src="images/feedback/feedback__slide-img-1.jpg" alt="" class="feedback__slider-slide-img"></div>
+                <div class="feedback__slider-slide swiper-slide">
+                  <img src="images/feedback/feedback__slide-img-1.jpg" alt="" class="feedback__slider-slide-img"></div>
+                <div class="feedback__slider-slide swiper-slide">
+                  <img src="images/feedback/feedback__slide-img-1.jpg" alt="" class="feedback__slider-slide-img"></div>
+              </div>
+              <div class="feedback__slider-next">
+                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z"
+                    fill="#B89A9A" />
+                </svg>
+              </div>
+              <div class="feedback__slider-prev">
+
+                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.292893 7.29289C-0.097631 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM2 7L1 7L1 9L2 9L2 7Z"
+                    fill="#AA1565" />
+                  <path
+                    d="M0.292893 7.29289C-0.097631 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM2 7L1 7L1 9L2 9L2 7Z"
+                    fill="#B89A9A" />
+                </svg>
+              </div>
+
+            </div>
+            <div class="feedback__slider-pagination"></div>
+          </div>
+          <div class="feedback__link-wrap">Больше отзывов о нас сморите в <a href="#"
+              class="feedback__link-ok">Одноклассниках</a></div>
+          <div class="feedback__link-wrap">Больше отзывов о нас смотрете <a href="#"
+              class="feedback__link-vk">Вконтакте</a></div>
+        </div>
+      </section>
+      <section class="social" id="social">
+        <div class="container">
+          <div class="social__box">
+            <h4 class="social__title">Мы в социальных сетях
+              <span>Мы в социальных сетях</span>
+            </h4>
+            <div class="social__subtitle"></div>
+            <div class="social__insta-box">
+              <a href="#" class="social__insta-link">
+                <img src="images/porfolio/portfolio-slider-img-6.jpg" alt="" class="social__insta-link-img"></a>
+              <a href="#" class="social__insta-link">
+                <img src="images/porfolio/portfolio-slider-img-3.jpg" alt="" class="social__insta-link-img"></a>
+              <a href="#" class="social__insta-link">
+                <img src="images/porfolio/portfolio-slider-img-5.jpg" alt="" class="social__insta-link-img"></a>
+              <a href="#" class="social__insta-link">
+                <img src="images/porfolio/portfolio-slider-img-1.jpg" alt="" class="social__insta-link-img"></a></div>
+            <div class="social__links-box">
+              <div class="social__link-box-youtube">
+                <a href="#" class="social__link-youtube">
+                  <svg class="social__link-youtube-icon" width="29" height="22" viewBox="0 0 29 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.8708 10.6888C28.8708 10.6169 28.8708 10.5352 28.8677 10.4404C28.8645 10.1756 28.8582 9.87819 28.8519 9.56112C28.8266 8.64913 28.7823 7.74042 28.7128 6.884C28.618 5.70398 28.4789 4.72008 28.2893 3.98134C28.0891 3.2104 27.6968 2.50729 27.1516 1.94227C26.6064 1.37726 25.9273 0.970143 25.1822 0.761608C24.2877 0.513182 22.5367 0.359551 20.0712 0.264757C18.8986 0.218994 17.6438 0.189575 16.3889 0.173231C15.9496 0.166694 15.5419 0.163425 15.1752 0.160156H14.2459C13.8793 0.163425 13.4715 0.166694 13.0322 0.173231C11.7774 0.189575 10.5225 0.218994 9.34989 0.264757C6.88449 0.362819 5.13026 0.516451 4.23892 0.761608C3.49361 0.969631 2.81426 1.37658 2.26895 1.94167C1.72363 2.50676 1.33151 3.21015 1.13188 3.98134C0.939069 4.72008 0.803155 5.70398 0.708332 6.884C0.638795 7.74042 0.594544 8.64913 0.569258 9.56112C0.559775 9.87819 0.556614 10.1756 0.553454 10.4404C0.553454 10.5352 0.550293 10.6169 0.550293 10.6888V10.8719C0.550293 10.9438 0.550293 11.0255 0.553454 11.1203C0.556614 11.3851 0.562936 11.6825 0.569258 11.9996C0.594544 12.9116 0.638795 13.8203 0.708332 14.6767C0.803155 15.8568 0.942229 16.8407 1.13188 17.5794C1.53646 19.1451 2.72491 20.3807 4.23892 20.7991C5.13026 21.0475 6.88449 21.2012 9.34989 21.296C10.5225 21.3417 11.7774 21.3712 13.0322 21.3875C13.4715 21.394 13.8793 21.3973 14.2459 21.4006H15.1752C15.5419 21.3973 15.9496 21.394 16.3889 21.3875C17.6438 21.3712 18.8986 21.3417 20.0712 21.296C22.5367 21.1979 24.2909 21.0443 25.1822 20.7991C26.6962 20.3807 27.8847 19.1484 28.2893 17.5794C28.4821 16.8407 28.618 15.8568 28.7128 14.6767C28.7823 13.8203 28.8266 12.9116 28.8519 11.9996C28.8614 11.6825 28.8645 11.3851 28.8677 11.1203C28.8677 11.0255 28.8708 10.9438 28.8708 10.8719V10.6888ZM26.5951 10.8588C26.5951 10.9275 26.5951 11.0026 26.5919 11.0909C26.5888 11.3459 26.5824 11.627 26.5761 11.931C26.554 12.8005 26.5097 13.6699 26.4434 14.4773C26.358 15.5299 26.2379 16.3928 26.0894 16.9714C25.8934 17.7265 25.3181 18.3247 24.5912 18.5241C23.9274 18.7071 22.2553 18.8542 19.9827 18.9425C18.8322 18.9882 17.5932 19.0176 16.3573 19.034C15.9243 19.0405 15.5229 19.0438 15.1626 19.0438H14.2586L13.0638 19.034C11.8279 19.0176 10.5921 18.9882 9.4384 18.9425C7.1658 18.8509 5.49059 18.7071 4.82998 18.5241C4.10301 18.3214 3.52774 17.7265 3.33178 16.9714C3.18322 16.3928 3.06311 15.5299 2.97777 14.4773C2.91139 13.6699 2.8703 12.8005 2.84502 11.931C2.83553 11.627 2.83237 11.3426 2.82921 11.0909C2.82921 11.0026 2.82605 10.9242 2.82605 10.8588V10.7019C2.82605 10.6333 2.82605 10.5581 2.82921 10.4698C2.83237 10.2149 2.8387 9.93375 2.84502 9.62976C2.86714 8.76027 2.91139 7.89078 2.97777 7.08339C3.06311 6.03085 3.18322 5.1679 3.33178 4.58933C3.52774 3.83424 4.10301 3.23606 4.82998 3.03667C5.49375 2.85362 7.1658 2.70652 9.4384 2.61826C10.5889 2.5725 11.8279 2.54308 13.0638 2.52674C13.4968 2.5202 13.8983 2.51693 14.2586 2.51693H15.1626L16.3573 2.52674C17.5932 2.54308 18.8291 2.5725 19.9827 2.61826C22.2553 2.70979 23.9306 2.85362 24.5912 3.03667C25.3181 3.23933 25.8934 3.83424 26.0894 4.58933C26.2379 5.1679 26.358 6.03085 26.4434 7.08339C26.5097 7.89078 26.5508 8.76027 26.5761 9.62976C26.5856 9.93375 26.5888 10.2181 26.5919 10.4698C26.5919 10.5581 26.5951 10.6365 26.5951 10.7019V10.8588ZM11.8975 15.1605L19.2305 10.7477L11.8975 6.40022V15.1605Z"
+                      fill="white" />
+                  </svg></a>
+                <div class="social__link-text">Посмотрите более <span>400</span> видеообзоров наших штор</div>
+              </div>
+              <div class="social__link-box-vk">
+                <a href="#" class="social__link-vk">
+                  <svg class="social__link-vk-icon" width="30" height="18" viewBox="0 0 30 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M28.8173 1.52372C29.018 0.863805 28.8173 0.37793 27.8564 0.37793H24.6838C23.8764 0.37793 23.5041 0.797329 23.3023 1.26024C23.3023 1.26024 21.6887 5.12307 19.4032 7.63221C18.6635 8.35982 18.3275 8.59067 17.9238 8.59067C17.722 8.59067 17.4186 8.35982 17.4186 7.69869V1.52372C17.4186 0.730854 17.1962 0.37793 16.5242 0.37793H11.5349C11.0309 0.37793 10.7275 0.745358 10.7275 1.09466C10.7275 1.84522 11.8709 2.01927 11.9882 4.13198V8.72241C11.9882 9.72921 11.8032 9.91172 11.3995 9.91172C10.3239 9.91172 7.70714 6.03076 6.15403 1.5902C5.85308 0.726019 5.5485 0.37793 4.7375 0.37793H1.56239C0.655906 0.37793 0.474609 0.797329 0.474609 1.26024C0.474609 2.08454 1.5503 6.17942 5.48444 11.5954C8.1072 15.2938 11.7996 17.299 15.1633 17.299C17.1805 17.299 17.4295 16.8542 17.4295 16.0867V13.2911C17.4295 12.4003 17.6204 12.2226 18.2598 12.2226C18.7312 12.2226 19.5373 12.4547 21.4204 14.2375C23.5718 16.3514 23.9259 17.299 25.137 17.299H28.3097C29.2162 17.299 29.6706 16.8542 29.4096 15.9743C29.1219 15.0992 28.0946 13.8289 26.7324 12.3218C25.9927 11.4636 24.8832 10.539 24.546 10.0761C24.0758 9.48265 24.21 9.21796 24.546 8.68978C24.546 8.68978 28.4136 3.34032 28.8161 1.52372H28.8173Z"
+                      fill="white" />
+                  </svg>
+
+                </a>
+                <div class="social__link-text">Посетите нашу группу в<span>Вконтакте</span></div>
+
+              </div>
+              <div class="social__link-box-ok">
+                <a href="#" class="social__link-ok">
+                  <svg class="social__link-ok-link" width="16" height="26" viewBox="0 0 16 26" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.92405 13.203C4.46037 13.203 1.58154 10.2963 1.58154 6.85669C1.58154 3.29816 4.46037 0.390137 7.92528 0.390137C11.5079 0.390137 14.2678 3.29692 14.2678 6.85669C14.2616 8.54556 13.5922 10.1629 12.4065 11.3531C11.2209 12.5434 9.61611 13.2092 7.94489 13.2043L7.92405 13.203ZM7.92405 4.12832C6.45766 4.12832 5.34193 5.37355 5.34193 6.85792C5.34193 8.33982 6.45766 9.46734 7.92528 9.46734C9.45175 9.46734 10.5086 8.33982 10.5086 6.85792C10.5099 5.37232 9.45175 4.12832 7.92405 4.12832ZM10.4498 18.4838L14.0336 21.9841C14.7386 22.7536 14.7386 23.8811 14.0336 24.5935C13.271 25.363 12.0952 25.363 11.5079 24.5935L7.92528 21.0338L4.46037 24.5935C4.10849 24.9491 3.63767 25.1263 3.10801 25.1263C2.69727 25.1263 2.22768 24.9479 1.81572 24.5935C1.11072 23.8811 1.11072 22.7536 1.81572 21.9829L5.45718 18.4826C4.14212 18.0891 2.88061 17.5318 1.70169 16.8235C0.82014 16.349 0.644811 15.1632 1.1144 14.2723C1.70169 13.3827 2.75857 13.1461 3.69898 13.7396C4.97238 14.5249 6.43532 14.9404 7.92711 14.9404C9.41891 14.9404 10.8819 14.5249 12.1553 13.7396C13.0957 13.1461 14.2102 13.3827 14.7386 14.2723C15.2683 15.1632 15.0316 16.3477 14.2089 16.8235C13.0944 17.536 11.8021 18.07 10.451 18.4851L10.4498 18.4838Z"
+                      fill="white" />
+                  </svg></a>
+                <div class="social__link-text">Посетите нашу группу в <span>Одноклассниках</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="address" id="address">
+        <div class="container">
+          <h4 class="address__title">Где мы находимся?
+            <span>Где мы находимся?</span>
+          </h4>
+          <address class="address__place">г. Омск, 70 лет Октября 25/52А “Торговый Город” Ряд: 43, Место: 83
+          </address>
+          <div class="address__time">
+            Вторник – воскресенье: с 10:30 до 16:00 без обеда, понедельник: выходной
+          </div>
+        </div>
+        <div class="address__map">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab4f19e9be584ebddb180a2653aa20953476477f66182c43eb1ccf89161612958&amp;source=constructor"
+            width="100%" height="153" frameborder="0"></iframe>
+        </div>
+        <div class="container"><img class="address__image" src="images/address/address-img.jpg" alt=""></div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a href="#" class="footer__logo"><img class="footer__logo-img" src="images/header/logo.png" alt=""></a>
+          <div class="footer__social-box">
+            <a href="#" class="footer__social-link"><svg class="footer__social-icon-insta" width="17" height="17"
+                viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.40365 5.74889C6.94042 5.74889 5.74631 6.94302 5.74631 8.40628C5.74631 9.86954 6.94042 11.0637 8.40365 11.0637C9.86689 11.0637 11.061 9.86954 11.061 8.40628C11.061 6.94302 9.86689 5.74889 8.40365 5.74889ZM16.3737 8.40628C16.3737 7.30585 16.3837 6.21538 16.3219 5.11694C16.2601 3.84107 15.969 2.70874 15.036 1.77576C14.1011 0.840789 12.9708 0.551725 11.6949 0.489925C10.5945 0.428125 9.50407 0.438093 8.40565 0.438093C7.30523 0.438093 6.21478 0.428125 5.11636 0.489925C3.84052 0.551725 2.70821 0.842782 1.77525 1.77576C0.840293 2.71073 0.551234 3.84107 0.489436 5.11694C0.427637 6.21737 0.437605 7.30784 0.437605 8.40628C0.437605 9.50473 0.427637 10.5972 0.489436 11.6956C0.551234 12.9715 0.842286 14.1038 1.77525 15.0368C2.7102 15.9718 3.84052 16.2608 5.11636 16.3226C6.21678 16.3844 7.30723 16.3745 8.40565 16.3745C9.50606 16.3745 10.5965 16.3844 11.6949 16.3226C12.9708 16.2608 14.1031 15.9698 15.036 15.0368C15.971 14.1018 16.2601 12.9715 16.3219 11.6956C16.3857 10.5972 16.3737 9.50672 16.3737 8.40628ZM8.40365 12.495C6.14102 12.495 4.31497 10.669 4.31497 8.40628C4.31497 6.14361 6.14102 4.31753 8.40365 4.31753C10.6663 4.31753 12.4923 6.14361 12.4923 8.40628C12.4923 10.669 10.6663 12.495 8.40365 12.495ZM12.6598 5.10498C12.1315 5.10498 11.7049 4.67836 11.7049 4.15007C11.7049 3.62178 12.1315 3.19516 12.6598 3.19516C13.1881 3.19516 13.6147 3.62178 13.6147 4.15007C13.6148 4.27551 13.5902 4.39976 13.5423 4.51568C13.4944 4.63161 13.424 4.73694 13.3353 4.82564C13.2466 4.91435 13.1413 4.98468 13.0254 5.03261C12.9095 5.08054 12.7852 5.10513 12.6598 5.10498Z"
+                  fill="white" />
+              </svg>
+              Instagram</a>
+            <a href="#" class="footer__social-link">
+              <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.22648 10.3101C3.54091 10.3101 1.30879 8.10826 1.30879 5.50282C1.30879 2.80729 3.54091 0.604492 6.22743 0.604492C9.00522 0.604492 11.1451 2.80635 11.1451 5.50282C11.1403 6.78212 10.6213 8.00721 9.70197 8.90882C8.78269 9.81043 7.53842 10.3148 6.24264 10.3111L6.22648 10.3101ZM6.22648 3.43612C5.08951 3.43612 4.22442 4.37937 4.22442 5.50376C4.22442 6.62628 5.08951 7.48036 6.22743 7.48036C7.41099 7.48036 8.23044 6.62628 8.23044 5.50376C8.23139 4.37843 7.41098 3.43612 6.22648 3.43612ZM8.18481 14.3102L10.9635 16.9617C11.5102 17.5445 11.5102 18.3986 10.9635 18.9383C10.3722 19.5211 9.46058 19.5211 9.00522 18.9383L6.22743 16.2418L3.54091 18.9383C3.26807 19.2076 2.90303 19.3419 2.49235 19.3419C2.17388 19.3419 1.80978 19.2067 1.49037 18.9383C0.943746 18.3986 0.943746 17.5445 1.49037 16.9607L4.31378 14.3093C3.29415 14.0112 2.31604 13.5891 1.40196 13.0526C0.718443 12.6931 0.582501 11.7949 0.946598 11.1201C1.40196 10.4462 2.22141 10.2669 2.95056 10.7165C3.9379 11.3114 5.07219 11.6261 6.22886 11.6261C7.38553 11.6261 8.51982 11.3114 9.50716 10.7165C10.2363 10.2669 11.1004 10.4462 11.5102 11.1201C11.9208 11.7949 11.7374 12.6922 11.0995 13.0526C10.2354 13.5922 9.23337 13.9968 8.18576 14.3112L8.18481 14.3102Z"
+                  fill="white" />
+              </svg>
+              Одноклассники</a>
+            <a href="#" class="footer__social-link"><svg width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M18.9994 1.31792C19.1317 0.882838 18.9994 0.5625 18.3659 0.5625H16.2741C15.7418 0.5625 15.4964 0.839011 15.3633 1.14421C15.3633 1.14421 14.2995 3.69098 12.7926 5.34526C12.305 5.82497 12.0834 5.97718 11.8173 5.97718C11.6842 5.97718 11.4842 5.82498 11.4842 5.38909V1.31792C11.4842 0.795184 11.3376 0.5625 10.8945 0.5625H7.60507C7.27278 0.5625 7.07277 0.804746 7.07277 1.03504C7.07277 1.52989 7.8266 1.64464 7.90389 3.03755V6.06403C7.90389 6.72782 7.78197 6.84815 7.51582 6.84815C6.80661 6.84815 5.08141 4.28942 4.05744 1.36175C3.85902 0.791996 3.65821 0.5625 3.12352 0.5625H1.03016C0.432518 0.5625 0.312988 0.839011 0.312988 1.14421C0.312988 1.68767 1.0222 4.38744 3.61598 7.95817C5.34517 10.3966 7.77958 11.7186 9.99725 11.7186C11.3272 11.7186 11.4914 11.4253 11.4914 10.9193V9.07617C11.4914 8.48888 11.6173 8.37175 12.0388 8.37175C12.3496 8.37175 12.8811 8.52474 14.1226 9.70011C15.541 11.0938 15.7745 11.7186 16.573 11.7186H18.6647C19.2624 11.7186 19.562 11.4253 19.3899 10.8452C19.2002 10.2683 18.5229 9.43077 17.6248 8.43709C17.1371 7.87132 16.4056 7.26172 16.1833 6.95652C15.8733 6.56526 15.9618 6.39075 16.1833 6.04252C16.1833 6.04252 18.7332 2.51561 18.9986 1.31792H18.9994Z"
+                  fill="white" />
+              </svg>
+              ВКонтакте</a>
+            <a href="#" class="footer__social-link"><svg width="18" height="13" viewBox="0 0 18 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.5623 2.44305C17.4655 2.0788 17.2757 1.74663 17.012 1.47978C16.7483 1.21293 16.4199 1.02076 16.0596 0.922496C14.7333 0.562012 9.41703 0.562012 9.41703 0.562012C9.41703 0.562012 4.10071 0.562012 2.77448 0.920579C2.41402 1.01852 2.08541 1.21059 1.82165 1.47749C1.55789 1.74439 1.36825 2.07673 1.27179 2.44113C0.916992 3.78336 0.916992 6.58287 0.916992 6.58287C0.916992 6.58287 0.916992 9.38238 1.27179 10.7227C1.46722 11.4628 2.04401 12.0457 2.77448 12.2432C4.10071 12.6037 9.41703 12.6037 9.41703 12.6037C9.41703 12.6037 14.7333 12.6037 16.0596 12.2432C16.7919 12.0457 17.3668 11.4628 17.5623 10.7227C17.9171 9.38238 17.9171 6.58287 17.9171 6.58287C17.9171 6.58287 17.9171 3.78336 17.5623 2.44305ZM7.7284 9.15228V4.01346L12.1302 6.5637L7.7284 9.15228Z"
+                  fill="white" />
+              </svg>
+              YouTube</a></div>
+
+          <div class="footer__contacts-box">
+            <div class="footer__contacts-time">Вт-Вс 10:30-16:00<br>
+              Пн выходной
+            </div>
+            <div class="footer__contacts-adress">Ул.70 лет Октября 25/16в,<br> ост.Таскопарк</div>
+            <div class="footer__contacts-tel">+7 (904) 826-85-14</div>
+          </div>
+          <nav class="footer__nav">
+            <ul class="footer__nav-items">
+              <li class="footer__nav-item">
+                <a href="#workers" class="footer__nav-item-link">Наша команда</a></li>
+              <li class="footer__nav-item">
+                <a href="#examples" class="footer__nav-item-link">Примеры наших работ</a></li>
+              <li class="footer__nav-item">
+                <a href="#portfolio" class="footer__nav-item-link">Портфолио</a></li>
+              <li class="footer__nav-item">
+                <a href="#catalog" class="footer__nav-item-link">Каталог товаров</a></li>
+              <li class="footer__nav-item">
+                <a href="#cycle" class="footer__nav-item-link">Как мы работаем</a></li>
+              <li class="footer__nav-item">
+                <a href="#feedback" class="footer__nav-item-link">Отзывы</a></li>
+              <li class="footer__nav-item">
+                <a href="#address" class="footer__nav-item-link">Контакты</a></li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-item-link">Статьи</a></li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-item-link">Доставка и оплата</a></li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-item-link">Политика Безопасности</a></li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-item-link">Обмен и возврат товара</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </div>
   <script src="js/main.min.js"></script>
 </body>
+
 </html>

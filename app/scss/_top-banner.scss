@@ -1,0 +1,49 @@
+.top__banner {
+  background-image: linear-gradient(rgba(63, 63, 63, 0.56), rgba(63, 63, 63, 0.56)), url("../images/top-banner/top-banner.jpg");
+  min-height: 622px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 140px 0 60px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  box-sizing: border-box;
+ }
+
+.top__banner-title {
+  font-family: "Merriweather", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}
+.top__banner-box {
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff;
+  margin-bottom: 100px;
+  @include RR12;
+  padding: 22px 0 14px 0;
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.top__banner-item {
+  width: 50%;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.top__banner-item-icon {
+  margin-right: 8px;
+  object-fit: contain;
+}
+.top__banner-item-text {
+}
+.top__banner-btn {
+  max-width: 245px;
+}

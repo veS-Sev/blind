@@ -1,0 +1,99 @@
+.request {
+  background-color: $pink;
+  padding: 37px 0;
+   z-index:10;
+}
+.container {
+}
+h4.request__title {
+  margin-bottom: 15px;
+  font-size: 32px;
+  color:rgba($accent, 0.09);
+}
+.request__subtitle {
+  text-align: center;
+    @include RL14;
+  max-width: 225px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+.request__form {
+  padding:0 27px;
+  @include RL14;
+  display: flex;
+  flex-wrap: wrap;
+}
+.request__form-name,
+.request__form-tel {
+  width: 100%;
+  max-width: 100%;
+  padding:0 10px;
+  height: 48px;
+  border-radius:9px;
+  &::placeholder{
+    color:$lgray;
+  }
+}
+.request__form-name {
+  margin-bottom: 20px;
+ 
+}
+.request__form-tel {
+
+}
+.request__check {
+}
+.request__form-btn {
+  margin: 30px auto 10px auto;
+
+}
+.request-btn-subscribe {
+  @include RL11;
+ width: fit-content;
+ margin:0 auto;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.request__check-label{
+  @include RL12;
+}
+//
+.request__check label:before {
+  border-radius: 3px;
+}
+
+input[type="checkbox"] + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  margin-top: 20px;
+  @media (max-width: 1000px) {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #fff;
+  background:#fff;
+  border-radius: 0.25em;
+  margin-right: 18px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+input[type="checkbox"]:checked + label::before {
+  border-color: #fff;
+  background-color: #fff;
+  background-image:url('../images/request/request-check.svg');
+}

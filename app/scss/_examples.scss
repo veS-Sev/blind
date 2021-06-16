@@ -1,0 +1,104 @@
+.examples {
+  padding-top: 20px;
+  &::before {
+    @include flr-r;
+    content: url("../images/examples/examples-bgr.jpg");
+    top: 50%;
+  }
+  &::after {
+    @include flr-r;
+    content: url("../images/examples/examples-bgr.jpg");
+    top: 82%;
+  }
+}
+
+h4.examples__title {
+  font-size: 36px;
+}
+.examples__part {
+  width: 100%;
+  max-width: calc(100% - 54px);
+  margin: 0 auto;
+  box-shadow: 5px 4px 36px rgba(184, 154, 154, 0.27);
+  border-radius: 6px;
+  padding: 10px 10px 25px;
+  background-color: #fff;
+}
+.examples__part + .examples__part {
+  margin-top: 35px;
+}
+.examples__part-media {
+  background-color: $pink;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.examples__media-img {
+  @include bgr;
+  width: 100%;
+  max-width: calc(50% - 5px);
+  min-height: 123px;
+  margin-bottom: 10px;
+}
+.examples__media-video {
+}
+.examples__part-text {
+}
+.examples__text-title-problem {
+}
+h6[class^="examples__title-"] {
+  background-color: $pink;
+  max-width: 114px;
+  height: 32px;
+  border-radius: 0px 6px 6px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include RM14;
+  margin-left: -10px;
+  margin-bottom: 10px;
+}
+div[class^="examples__text-"] {
+  @include RR9;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.examples__item-text-problem {
+}
+.examples__item-title-solution {
+}
+.examples__item-text-solution {
+}
+.examples__item-title-result {
+}
+.examples__item-text-result {
+}
+.examples__item-request-box {
+}
+.examples__request-days,
+.examples__request-price {
+  display: flex;
+  max-width: calc(100% - 20px);
+  width: 100%;
+  justify-content: space-between;
+  @include RR9;
+  margin-bottom: 27px;
+  padding: 0 10px;
+}
+.examples__request-line {
+  display: flex;
+  width: 100%;
+  max-width: 50%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+}
+.examples__request-btn {
+}
+.examples__request-btn-subscribe {
+  @include RL9;
+  display: flex;
+  color: $gray;
+  justify-content: center;
+}

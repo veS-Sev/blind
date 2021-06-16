@@ -1,3 +1,19 @@
-@import "global";
 @import "vars";
 @import "fonts";
+@import "global";
+
+
+//mobile first
+@import "header";
+@import "top-banner";
+@import "catalog";
+@import "cycle";
+@import "examples";
+@import "videoblog";
+@import "portfolio";
+@import "request";
+@import "workers";
+@import "social";
+@import "feedback";
+@import "address";
+@import "footer";
