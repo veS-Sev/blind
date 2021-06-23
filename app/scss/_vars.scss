@@ -22,14 +22,13 @@ $title:#363636;
   right: 0;
 }
 
-//for fonts
+//The styles for fonts start
 @mixin RB40{
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   line-height: 57px;
   font-size: 40px;
 }
-
 
 @mixin R500 {
   font-family: "Roboto", sans-serif;
@@ -65,7 +64,7 @@ $title:#363636;
 @mixin RR17 {
   @include R400;
   font-size: 17px;
-  // для button
+  // for buttons
   line-height: 24px;
 }
 
@@ -99,11 +98,6 @@ $title:#363636;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
-// @mixin RL17 {
-//   @include R300;
-//   font-size: 17px;
-//   line-height: 19px;
-// }
 @mixin RL15 {
   @include R300;
   font-size: 15px;
@@ -129,4 +123,4 @@ $title:#363636;
   font-size: 9px;
   line-height: 14px;
 }
-//
+//The styles for fonts start

@@ -1,7 +1,3 @@
-.catalog {
-  .container {
-  }
-}
 h4.catalog__title {
   margin-top: 40px;
 }
@@ -31,17 +27,4 @@ width: fit-content;
   text-align: center;
   border-bottom:1px solid #B89A9A;
   position:relative;
-//   span{
-//     display:inline-block;
-//   &::after{
-//     content:"";
-//     position:absolute;
-//     left:0;
-//     right: 0;
-//     bottom:0;
-//     height: 1px;
-//     width: 100%;
-//     background-color:#B89A9A;
-//   }
-// }
 }

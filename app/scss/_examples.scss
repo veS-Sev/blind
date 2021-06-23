@@ -40,13 +40,11 @@ h4.examples__title {
   width: 100%;
   max-width: calc(50% - 5px);
   min-height: 123px;
-  margin-bottom: 10px;
+  border-radius:6px;
 }
 .examples__media-video {
-}
-.examples__part-text {
-}
-.examples__text-title-problem {
+margin-top: 10px;
+  border-radius:6px;
 }
 h6[class^="examples__title-"] {
   background-color: $pink;
@@ -66,18 +64,7 @@ div[class^="examples__text-"] {
   padding: 0 10px;
   margin-bottom: 20px;
 }
-.examples__item-text-problem {
-}
-.examples__item-title-solution {
-}
-.examples__item-text-solution {
-}
-.examples__item-title-result {
-}
-.examples__item-text-result {
-}
-.examples__item-request-box {
-}
+
 .examples__request-days,
 .examples__request-price {
   display: flex;
@@ -93,8 +80,6 @@ div[class^="examples__text-"] {
   width: 100%;
   max-width: 50%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
-}
-.examples__request-btn {
 }
 .examples__request-btn-subscribe {
   @include RL9;

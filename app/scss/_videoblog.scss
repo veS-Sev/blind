@@ -6,11 +6,6 @@
      @include flr-l;
   }
 }
-.container {
-}
-.videoblog__title {
-
-}
 .videoblog__content {
   padding: 20px 27px;
 }
@@ -22,7 +17,6 @@
     margin-top: 20px;
   }
 }
-
 .videoblog__btn {
   @extend button;
   max-width: 290px;

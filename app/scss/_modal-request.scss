@@ -1,0 +1,56 @@
+.modal__request {
+  position: fixed;
+  width: 351px;
+  height: 494px;
+  padding: 15px 15px 45px;
+  background: #ffffff;
+  border-radius: 13px;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+   z-index: 999;
+  display: none;
+}
+.modal__request-close {
+  margin-left: calc(100% - 20px);
+  margin-bottom: 10px;
+}
+.modal__request-title {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  color: $text;
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  margin-top: 0;
+}
+.modal__request-subtitle {
+  @extend .request__subtitle;
+
+}
+.modal__request-form {
+  @extend .request__form;
+  padding: 0px;
+  input[class$="check"] + label {
+    margin-top: 0px;
+  }
+}
+.modal__request-input-name,
+.modal__request-input-tel {
+  @extend .request__form-name;
+  box-shadow: 5px 4px 36px rgba(184, 154, 154, 0.27);
+}
+.modal__request-check-label{
+  @include RL12;
+  max-width: 300px;
+}
+.modal__request-btn {
+  @extend .request__form-btn;
+}
+.modal__request-btn-subscribe {
+  @extend .request-btn-subscribe;
+}
+
+// styles for checkbox is in global.scss
