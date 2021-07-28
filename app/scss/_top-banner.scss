@@ -10,6 +10,16 @@
   background-position: 0 0;
   box-sizing: border-box;
   z-index:1;
+  margin-top: 88px;
+  @media(min-width:800px){
+    margin-top: 100px;
+  }
+  @media(min-width:920px){
+    // margin-top: 215px;
+      margin-top: 160px;
+    padding-top:100px;
+    background-position: center;
+  }
  }
 .top__banner-title {
   font-family: "Merriweather", serif;
@@ -17,6 +27,13 @@
   font-weight: 400;
   color: #fff;
   text-align: center;
+  line-height: 2;
+  @media(min-width:920px){
+    font-size: 40px;
+  }
+  @media(min-width:1260px){
+    font-size: 38px;
+  }
 }
 .top__banner-box {
   width: 100%;
@@ -25,26 +42,62 @@
   margin-bottom: 100px;
   @include RR12;
   padding: 22px 0 14px 0;
+  @media(min-width:550px){
+    @include RR15;
+  }
+  @media(min-width:1150px){
+    @include RR17;
+    padding: 27px 0 19px 0;
+  }
   .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    @media(min-width:850px){
+
+    }
   }
 }
 .top__banner-item {
-  width: 50%;
+  width: calc(50% - 20px);
   max-width: 50%;
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  &:nth-child(even){
+    margin-left: 20px;
+  }
+  @media(min-width:850px){
+    width: calc(25% - 20px);
+    max-width: 25%;
+    &+&{
+      margin-left: 20px;
+    }
+  }
+
 }
 .top__banner-item-icon {
   margin-right: 8px;
   object-fit: contain;
+  @media(min-width:920px){
+    width: 33px;
+    height: 33px;
+  }
+  @media(min-width:1260px){
+    width: 53px;
+    height: 53px;
+  }
+}
+.top__banner-item-text {
+
 }
 .top__banner-btn {
+  @include index-btn;
   max-width: 245px;
   position: relative;
+  @media(min-width:920px){
+    max-width: 345px;
+  }
   &::after{
     content: "";
     position: absolute;

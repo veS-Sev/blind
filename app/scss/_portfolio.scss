@@ -8,16 +8,31 @@
 }
 h4.portfolio__title {
   margin-bottom: 15px;
+  @media (min-width: 920px) {
+    margin-top: 40px;
+  }
 }
 .portfolio__text {
   margin-bottom: 33px;
   @include RL14;
   padding: 0 27px;
   text-align: center;
+  @media (min-width: 550px) {
+    @include RL15;
+  }
+  @media (min-width: 750px) {
+    @include RR17;
+  }
+  @media (min-width: 950px) {
+    @include RR18;
+  }
 }
 .portfolio__slider {
   padding: 0 27px;
   position: relative;
+  @media(min-width: 800px){
+    padding: 0 35px;
+  }
 }
 .portfolio__slide-wrap {
   background-color: #fff;
@@ -34,6 +49,13 @@ h4.portfolio__title {
   background-color: $pink;
   justify-content: space-between;
   align-content: space-between;
+  @media(min-width: 800px){
+    padding: 0 20px 20px;
+  }
+  @media(min-width: 1000px){
+    padding: 0 30px 30px;
+  }
+  
 }
 .portfolio__slider-slide-img {
   margin-top: 10px;
@@ -41,6 +63,14 @@ h4.portfolio__title {
   width: 100%;
   min-height: 147px;
   object-fit: cover;
+  @media(min-width: 800px){
+    margin-top: 20px;
+    max-width: calc(50% - 10px);
+  }
+  @media(min-width: 1000px){
+    margin-top: 30px;
+    max-width: calc(33.33% - 20px);
+  }
 }
 .portfolio__slider-next,
 .portfolio__slider-prev {
@@ -49,9 +79,32 @@ h4.portfolio__title {
 }
 .portfolio__slider-next {
   right: 10px;
+  @media (min-width: 1100px) {
+    right: 0px;
+  }
 }
 .portfolio__slider-prev {
   left: 10px;
+  @media (min-width: 1100px) {
+    left: 0px;
+  }
+}
+.portfolio__slider-prev-icon,
+.portfolio__slider-prev-icon {
+  width: 14px;
+  height: 20px;
+  @media (min-width: 650px) {
+    width: 18px;
+    height: 24px;
+  }
+  @media (min-width: 950px) {
+    width: 25px;
+    height: 32px;
+  }
+  @media (min-width: 1100px) {
+    width: 35px;
+    height: 42px;
+  }
 }
 .portfolio__slider-pagination {
   margin-top: 18px;
@@ -61,5 +114,13 @@ h4.portfolio__title {
   }
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: $accent;
+  }
+
+}
+.swiper-pagination-bullet{
+  @media(min-width:800px) {
+    width: 12px;
+    height: 12px;
+    
   }
 }

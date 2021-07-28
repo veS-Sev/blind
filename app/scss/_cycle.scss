@@ -14,6 +14,9 @@
 
 h4.cycle__title {
   margin: 35px 0 20px 0;
+  @media(min-width:920px){
+    margin: 55px 0 40px 0;
+  }
 }
 .cycle__items {
   display: flex;
@@ -21,6 +24,9 @@ h4.cycle__title {
   max-width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media (min-width: 950px) {
+    justify-content: space-around;
+  }
 }
 .cycle__item {
   margin-bottom: 10px;
@@ -31,9 +37,27 @@ h4.cycle__title {
   width: calc(50% - 5px);
   position: relative;
   min-height: 140px;
+  @media (min-width: 950px) {
+    max-width: calc(50% - 30px);
+    width: 100%;
+    min-height: 200px;
+    }
+    @media (min-width: 950px) {
+      max-width: 45%;
+   padding:30px;
+      
+      }
   &::before {
     position: absolute;
     right: 15px;
+    content:"";
+    width: 27px;
+    height: 27px;
+    @include bgr;
+    @media (min-width: 950px) {
+   width: 37px;
+  height: 37px;
+      }
   }
   &::after {
     position: absolute;
@@ -41,12 +65,19 @@ h4.cycle__title {
     color: $pink;
     bottom: -20px;
     right: -5px;
+    @media (min-width: 950px) {
+      @include RB60;
+    }
   }
 }
-
 .cycle__item:nth-child(1) {
   &::before {
-    content: url(../images/cycle/cycle-icon-1.png);
+    background-image: url(../images/cycle/cycle-icon-1.png);
+    width: 24px;
+    @media (min-width: 950px) {
+      width: 33px;
+    }
+  
   }
   &::after {
     content: "1";
@@ -54,7 +85,7 @@ h4.cycle__title {
 }
 .cycle__item:nth-child(2) {
   &::before {
-    content: url(../images/cycle/cycle-icon-2.png);
+    background-image: url(../images/cycle/cycle-icon-2.png);
   }
   &::after {
     content: "2";
@@ -62,7 +93,7 @@ h4.cycle__title {
 }
 .cycle__item:nth-child(3) {
   &::before {
-    content: url(../images/cycle/cycle-icon-3.png);
+    background-image: url(../images/cycle/cycle-icon-3.png);
   }
   &::after {
     content: "3";
@@ -70,7 +101,7 @@ h4.cycle__title {
 }
 .cycle__item:nth-child(4) {
   &::before {
-    content: url(../images/cycle/cycle-icon-4.png);
+    background-image: url(../images/cycle/cycle-icon-4.png);
   }
   &::after {
     content: "4";
@@ -78,7 +109,7 @@ h4.cycle__title {
 }
 .cycle__item:nth-child(5) {
   &::before {
-    content: url(../images/cycle/cycle-icon-5.png);
+    background-image: url(../images/cycle/cycle-icon-5.png);
   }
   &::after {
     content: "5";
@@ -98,15 +129,42 @@ h4.cycle__title {
   @include RM10;
   margin-bottom: 10px;
   max-width: 75%;
+  @media (min-width: 550px) {
+    @include RM13;
+  }
+  @media (min-width: 750px) {
+    @include RM18;
+  }
+  @media (min-width: 950px) {
+    @include RB18;
+    margin-bottom: 20px;
+  }
 }
 .cycle__item-text {
   @include RR8;
   background-color: #fff;
   max-width: 80%;
+  @media (min-width: 550px) {
+    @include RR11;
+  }
+  @media (min-width: 750px) {
+    @include RR12;
+  }
+  @media (min-width: 950px) {
+    @include RR15;
+  }
 }
 .cycle__item-btn {
+  @include index-btn;
   margin-top: 14px;
   @include RR10;
   max-width: 155px;
   height: 28px;
+  @media (min-width: 950px) {
+    @include RR14;
+    max-width: fit-content;
+    padding: 0 15px;
+    height: 38px;
+    margin-top: 24px;
+  }
 }

@@ -2,11 +2,57 @@
   background-color: $pink;
   padding: 37px 0;
    z-index:10;
+   @media(min-width:920px){
+     padding: 60px 0 50px 0;
+   }
+   input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  label{
+    @include RL12;  
+    @media(min-width:920px){
+        @include RL15;
+    }
+  }
+  input[class$="check"] label:before {
+    border-radius: 3px;
+  }
+  
+  input[class$="check"] + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    margin-top: 20px;
+  }
+  
+  input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 0.25em;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  
+  }
+  input[type="checkbox"]:checked + label::before {
+    border-color: #fff;
+    background-color: #fff;
+    background-image: url('../images/request/request-check.svg');
+  }
 }
 h4.request__title {
   margin-bottom: 15px;
   font-size: 32px;
   color:rgba($accent, 0.09);
+  
 }
 .request__subtitle {
   text-align: center;
@@ -14,15 +60,20 @@ h4.request__title {
   max-width: 225px;
   margin: 0 auto;
   margin-bottom: 25px;
+  @media(min-width:920px){
+    @include RL16;
+}
 }
 .request__form {
   padding:0 27px;
-  @include RL14;
+  flex-direction:column;
   display: flex;
   flex-wrap: wrap;
+ align-items:center;
 }
 .request__form-name,
 .request__form-tel {
+  @include RL14;
   width: 100%;
   max-width: 100%;
   padding:0 10px;
@@ -31,16 +82,25 @@ h4.request__title {
   &::placeholder{
     color:$lgray;
   }
+  @media(min-width:920px){
+    max-width: 75%;
+    @include RR17;
+  }
 }
 .request__form-name {
   margin-bottom: 20px; 
 }
 .request__form-btn {
   margin: 30px auto 10px auto;
-}
+  @include index-btn;
+ }
 .request-btn-subscribe {
   @include RL11;
  width: fit-content;
  margin:0 auto;
+ @media(min-width:920px){
+  max-width: 75%;
+  @include RR15;
+}
 }
 //the styles for checkbox is in global.scss

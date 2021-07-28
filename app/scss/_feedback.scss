@@ -12,6 +12,11 @@
     left: 5%;
   }
 }
+h4.feedback__title{
+  @media(min-width:920px){
+    margin-bottom: 20px;
+  }
+}
 .feedback__slider-container {
   min-height: 520px;
   max-height: 520px;

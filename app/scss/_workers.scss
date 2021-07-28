@@ -1,5 +1,8 @@
 .workers {
   padding: 50px 0;
+  @media(min-width:920px){
+    padding: 60px 0;
+  }
 }
 h4.workers__title {
   margin-bottom: 40px;
