@@ -42,6 +42,9 @@ function scripts(){
     'node_modules/jquery/dist/jquery.js',
     'node_modules/swiper/swiper-bundle.js',
     'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+    'node_modules/underscore/underscore-umd.js',
+    'app/js/categories.js',
+    'app/js/cart.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))

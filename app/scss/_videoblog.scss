@@ -36,7 +36,7 @@ h4.videoblog__title {
 }
 
 .videoblog__btn {
-  @extend button;
+  @include index-btn;
   max-width: 290px;
   @media (min-width: 1081px) {
     margin-top: 40px;

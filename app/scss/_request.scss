@@ -61,7 +61,8 @@ h4.request__title {
   margin: 0 auto;
   margin-bottom: 25px;
   @media(min-width:920px){
-    @include RL16;
+    @include RL20;
+    max-width: 370px;
 }
 }
 .request__form {
@@ -83,7 +84,7 @@ h4.request__title {
     color:$lgray;
   }
   @media(min-width:920px){
-    max-width: 75%;
+    max-width: 80%;
     @include RR17;
   }
 }

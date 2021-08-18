@@ -4,7 +4,13 @@
   z-index: 10;
   @media(min-height:920px){
     padding: 55px 0 35px 0;
+    display: flex;
+    flex-wrap: wrap ;
+    .container:last-child{
+      display: flex;
+    }
   }
+ 
 }
 h4.address__title {
   color: rgba($accent, 0.1);

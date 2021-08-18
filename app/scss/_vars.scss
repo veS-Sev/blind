@@ -112,6 +112,11 @@ $title: #363636;
   font-size: 36px;
     line-height: 55px;
 }
+// @mixin RR30 {
+//   @include R400;
+//   font-size: 30px;
+//   line-height: 38px;
+// }
 @mixin RR24 {
   @include R400;
   font-size: 24px;
@@ -183,6 +188,11 @@ $title: #363636;
   font-size: 15px;
   line-height: 23px;
 }
+@mixin RL20 {
+  @include R300;
+  font-size: 20px;
+  line-height: 25px;
+}
 @mixin RL14 {
   @include R300;
   font-size: 14px;
@@ -239,3 +249,5 @@ $title: #363636;
   width: 100%;
   height: 30px;
 }
+
+

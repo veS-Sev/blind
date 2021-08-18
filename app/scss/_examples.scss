@@ -51,6 +51,7 @@ h4.examples__title {
   min-height: 123px;
   border-radius:6px;
   display: flex;
+  background-color:$pink;
   @media(min-width:920px){
     max-width: calc(25% - 5px); 
   }

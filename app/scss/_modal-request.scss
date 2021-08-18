@@ -24,32 +24,32 @@
   input[class$="check"] label:before {
     border-radius: 3px;
   }
-  
-  input[class$="check"] + label {
+    input[class$="check"] + label {
     display: inline-flex;
     align-items: center;
     user-select: none;
     margin-top: 20px;
   }
-  
-  input[type="checkbox"] + label::before {
+    input[type="checkbox"] + label::before {
     content: "";
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 15px;
+    height: 15px;
     flex-shrink: 0;
     flex-grow: 0;
-    background-color: #fff;
-    border: 1px solid #fff;
+    background-color:#fff;
+      border: 1px solid rgb(165, 154, 154);
     border-radius: 0.25em;
     margin-right: 8px;
     background-repeat: no-repeat;
     background-position: center center;
     }
   input[type="checkbox"]:checked + label::before {
-    border-color: #fff;
     background-color: #fff;
     background-image: url('../images/request/request-check.svg');
+  }
+  @media(min-width:920px){
+    width: 795px;
   }
 }
 .modal__request-close {
@@ -76,6 +76,7 @@
   padding: 0px;
   input[class$="check"] + label {
     margin-top: 0px;
+  
   }
 }
 .modal__request-input-name,
@@ -83,9 +84,15 @@
   @extend .request__form-name;
   box-shadow: 5px 4px 36px rgba(184, 154, 154, 0.27);
 }
-.modal__request-check-label{
+label.modal__request-check-label{
   @include RL12;
   max-width: 300px;
+  @media(min-width:920px){
+    margin-bottom: 20px;
+    max-width: 670px;
+    @include RL15;
+  }
+
 }
 .modal__request-btn {
   @extend .request__form-btn;

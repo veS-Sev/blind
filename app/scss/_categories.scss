@@ -21,14 +21,15 @@
     flex-grow: 0;
     background-color: #fff;
     border: 2px solid $gray;
-      margin-right: 8px;
+    margin-right: 8px;
     background-repeat: no-repeat;
     background-position: center center;
   }
   input[type="checkbox"]:checked + label::before {
+    border-radius:50%;
     border-color: $gray;
     background-color: #fff;
-    background-image: url("../images/request/request-check.svg");
+    background-image: url("../images/categories/categories-check-icon.svg");
   }
 }
 .categories__wrapper {
@@ -52,6 +53,7 @@
 }
 .categories__aside-category,
 .categories__aside-colors,
+.categories__aside-price,
 .categories__aside-textile,
 .categories__aside-darkening,
 .categories__aside-hight,
@@ -66,6 +68,68 @@
   margin-left: 20px;
 }
 .categories__aside-category-item-link {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: 5px;
+  }
+}
+.categories__aside-category-item-link:hover {
+  &:hover{
+    &:before {
+      animation-name: links;
+      animation-duration: 1.5s;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+    }}
+}
+.categories__aside-category-item-link:active {
+  &:before {
+    background-color: rgba($gray, 1);
+    right: 0;
+    width: 100%;
+  }
+}
+
+@keyframes links {
+  1% {
+    width: 0;
+    background-color: rgba($gray, 0);
+  }
+  100% {
+    width: 100%;
+    right: 0;
+    background-color: rgba($gray, 1);
+  }
+}
+.categories__aside-price-form{
+  display: flex;
+ }
+.categories__aside-price-input-wrap {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  border:1px solid $gray;
+  border-radius:5%;
+  padding-left: 5px;
+  align-items:center;
+  font-size: 26px;
+  &+&{
+    margin-left: 20px;
+  }
+}
+input.categories__aside-price-input {
+  margin-left: 10px;
+  height: 45px;
+  width: 103px;
+  border:none;
+  font-size: 30px;
+}
+.categories__aside-price-input-space {
 }
 .categories__aside-colors {
 }
@@ -80,9 +144,9 @@
   max-width: calc(27% - 30px);
   width: 100%;
 
-  .categories__aside-color-radio {
+  input.categories__aside-color-radio {
     position: absolute;
-    z-index:0;
+    z-index: -1;
     right: 100vw;
   }
   .categories__aside-color-radio + .categories__aside-color {
@@ -98,7 +162,7 @@
     border: 2px solid transparent;
     z-index: 1;
   }
-  .categories__aside-color-radio:checked + .categories__aside-color {
+  .radio-checked:checked + .categories__aside-color {
     border: 3px solid rgba($gray, 1);
     transition: all 0.3s ease;
   }
@@ -134,10 +198,14 @@
 .color-10 {
   background-color: #ff0303;
 }
+h5[class^="categories__aside-"] {
+  @include RS30;
+  // margin-bottom: 25px;
+}
 
-h5.categories__aside-colors-title {
+h5.categories__aside-colors-title, 
+h5.categories__aside-price-title{
   margin-bottom: 25px;
-
 }
 .categories__aside-textile {
 }
@@ -145,16 +213,12 @@ h5.categories__aside-colors-title {
 }
 .categories__aside-textile-list {
 }
-h5[class^="categories__aside-"] {
-  @include RS30;
-  // margin-bottom: 25px;
-}
-.categories__items-select-wrapper {
+
+.categories__items-select-form {
   display: flex;
   justify-content: flex-end;
 }
-.categories__item-price,
-.categories__items-select {
+.categories__item-price {
   @include RS30;
 }
 
@@ -163,6 +227,12 @@ h5[class^="categories__aside-"] {
   @include RS30;
 }
 .categories__items-select {
+  padding:0 10px;
+  @include RL30;
+  option {
+    @include RL30;
+    width: 150px;
+  }
 }
 .categories__inner {
   width: 100%;
@@ -175,19 +245,18 @@ h5[class^="categories__aside-"] {
 .categories__items-select {
 }
 .form-control {
-  
 }
-.categories__item{
+.categories__item {
   width: 100%;
   max-width: 360px;
-  // max-width: calc(33.33% - 20px); 
+  // max-width: calc(33.33% - 20px);
 }
-.categories__item+.categories__item{
+.categories__item + .categories__item {
   margin-left: 20px;
 }
 .categories__item-link {
- 
 }
+
 .categories__item-img {
   object-fit: cover;
   height: 450px;
@@ -201,7 +270,7 @@ h5[class^="categories__aside-"] {
   min-height: 60px;
   max-height: 60px;
 }
-.categories_item-cart{
+.categories_item-cart {
   @include cart-btn;
   margin-top: 20px;
 }

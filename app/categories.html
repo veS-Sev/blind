@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body data-page="categories">
   <div class="wrapper">
     <div class="content">
       <header class="header">
@@ -106,7 +106,7 @@
       <section class="categories">
         <div class="categories__wrapper">
           <aside class="categories__aside">
-            <div class="categories__aside-category">
+            <form class="categories__aside-category" id="aside-filters">
               <h5 class="categories__aside-category-title">Категории</h5>
               <ul class="categories__aside-category-list">
                 <li class="categories__aside-category-item">
@@ -122,7 +122,7 @@
                 <li class="categories__aside-category-item">
                   <a href="#" class="categories__aside-category-item-link">Распродажа</a></li>
               </ul>
-            </div>
+            </form>
             <div class="categories__aside-colors">
               <h5 class="categories__aside-colors-title">Цвет</h5>
               <ul class="categories__aside-colors-list" id="colors">
@@ -160,7 +160,16 @@
             </div>
             <div class="categories__aside-price">
               <h5 class="categories__aside-price-title">Цена</h5>
+              <form class="categories__aside-price-form" id="price">
+              <div class="categories__aside-price-input-wrap">от
+                <input class="categories__aside-price-input" placeholder ="0" type="text" id="price-min">
+              </div>
+                      <div class="categories__aside-price-input-wrap">до
+                <input class="categories__aside-price-input" placeholder ="50000" type="text"  id="price-max">&nbsp;руб.
+              </div>
+              </form>
             </div>
+
             <div class="categories__aside-textile">
               <h5 class="categories__aside-textile-title">Материал изделия</h5>
               <ul class="categories__aside-textile-list" id="textile">
@@ -220,7 +229,7 @@
             </div>
           </aside>
           <div class="categories__inner">
-            <div class="categories__items-select-wrapper">
+            <form class="categories__items-select-form" id="select-form">
               <div class="categories__items-select-title">Сортировать</div>
               <select id="sort" name="sort" class="categories__items-select form-control">
                 <option value="price_asc">По цене, сначала дешевые</option>
@@ -229,7 +238,7 @@
                 <option value="good_asc">По названию, A-Z</option>
                 <option value="good_desc">По названию, Z-A</option>
               </select>
-            </div>
+            </form>
             <div class="categories__items">
               <div class="categories__item">
                 <a href="#" class="categories__item-link">

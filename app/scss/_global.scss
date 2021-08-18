@@ -30,8 +30,7 @@ a {
 }
 button,
 input {
-  
-  outline: none;
+   outline: none;
   border: none;
   &:focus-visible,
   &:active,
@@ -42,26 +41,26 @@ input {
   }
 }
 
-// button {
-//   background-color: $accent;
-//   color: #fff;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 100%;
-//   max-width: 220px;
-//   height: 48px;
-//   border-radius: 9px;
-//   @include RR17;
-//   margin: 0 auto;
-//   @media(min-width:920px){
-//     max-width: 320px;
-//   height: 58px;
-//   border-radius: 13px;
-//   @include RM18;
+.videoblog__btn {
+  background-color: $accent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 220px;
+  height: 48px;
+  border-radius: 9px;
+  @include RR17;
+  margin: 0 auto;
+  @media(min-width:920px){
+    max-width: 320px;
+  height: 58px;
+  border-radius: 13px;
+  @include RM18;
   
-//   }
-// }
+  }
+}
 li {
   list-style: none;
   box-sizing:border-box;
@@ -87,8 +86,8 @@ address{
 }
 
 .container {
-  // max-width: 1920px;
-   max-width: 1280px;
+  max-width: 1920px;
+  //  max-width: 1280px;
   padding: 0 20px;
   margin: 0 auto;
   z-index:10;
